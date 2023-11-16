@@ -1,7 +1,4 @@
 # simple-Ansible-all_for_Linux
-This playbook installs most of the tools you need to work on a clean Linux
-
-# Ubuntu System Setup Playbook
 
 ## Overview
 This Ansible playbook is designed to set up a clean Ubuntu system with a standard set of tools and utilities commonly used in development, system administration, and server management. It automates the installation and basic configuration of various software packages, making the system ready for use or further customization.
