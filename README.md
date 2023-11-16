@@ -29,7 +29,9 @@ The playbook includes tasks to install the following:
 1. Ensure you have Ansible installed on your control machine.
 2. Clone this repository or copy the playbook file to your control machine.
 3. Set up your Ansible inventory with the target Ubuntu machine(s).
-4. Run the playbook using the following command: ansible-playbook -i <your-inventory-file> setup-ubuntu.yml
+4. Run the playbook using the following command:
+   ```ansible-playbook -i <your-inventory-file> setup-ubuntu.yml
+   ```
 
 Replace `<your-inventory-file>` with the path to your inventory file.
 
