@@ -44,10 +44,10 @@ You can customize the playbook by modifying the `setup-ubuntu.yml` file. Add or 
 Contributions to this playbook are welcome. Please fork the repository and submit a pull request with your suggested changes.
 
 ## License
-[MIT License]
+MIT License
 
 ## Author
-[Akhrimov Ruslan]
+Akhrimov Ruslan
 
 ## Disclaimer
 This playbook is provided "as is", without warranty of any kind, express or implied.
