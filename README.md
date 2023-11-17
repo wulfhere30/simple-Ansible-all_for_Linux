@@ -41,7 +41,7 @@ You can customize the playbook by modifying the `setup-ubuntu.yml` file. Add or 
 - Some tasks might require a reboot or may restart services. Ensure you have proper backups and configurations in place.
 
 ## Contribution
-Contributions to this playbook are welcome. Please fork the repository and submit a pull request with your suggested changes.
+Contributions to this playbook are welcome.
 
 ## License
 MIT License
