@@ -23,10 +23,37 @@ The playbook includes tasks to install the following:
 - Archive utilities (`zip`, `unzip`, `tar`).
 
 ## Usage
-1. Ensure you have Ansible installed on your control machine.
-2. Clone this repository or copy the playbook file to your control machine.
-3. Set up your Ansible inventory with the target Ubuntu machine(s).
-4. Run the playbook using the following command:
+1. Ensure you have Ansible installed on your control machine. If not installed, here are the installation instructions:
+   ## Step 1: Update the Package List
+   Before installing new software, it's always a good idea to update your package manager to ensure you have access to the latest versions. Open your terminal and run:
+   ```bash
+   sudo apt update
+   ```
+   ## Step 2: Install Software Properties Common (Optional)
+   This step is necessary if you want to add a Personal Package Archive (PPA) to your system, which can provide more up-to-date versions of Ansible:
+   ```bash
+   sudo apt install software-properties-common
+   ```
+   ## Step 3: Add Ansible's Official PPA (Optional)
+   For the latest version of Ansible, you can add its official PPA to your system. This step is optional, but recommended for getting the most up-to-date version:
+   ```bash
+   sudo add-apt-repository --yes --update ppa:ansible/ansible
+   ```
+   ## Step 4: Install Ansible
+   Now, install Ansible using the apt package manager:
+   ```bash
+   sudo apt install ansible
+   ```
+   ## Step 5: Verify Installation
+   After installation, you can verify that Ansible is correctly installed by checking its version:
+   ```bash
+   ansible --version
+   ```
+   This command will display the installed version of Ansible, confirming that the installation was successful.
+
+3. Clone this repository or copy the playbook file to your control machine.
+4. Set up your Ansible inventory with the target Ubuntu machine(s). Ansible inventory and playbooks are typically stored in an Ansible project directory that you create on your management node (the computer from which you run Ansible).
+5. Run the playbook using the following command:
    ```bash
    ansible-playbook -i <your-inventory-file> setup-ubuntu.yml
    ```
