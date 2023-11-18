@@ -24,7 +24,7 @@ The playbook includes tasks to install the following:
 
 ## Usage
 1. Ensure you have Ansible installed on your control machine. If not installed, here are the installation instructions:
-   ## Step 1: Update the Package List
+   # Step 1: Update the Package List
    Before installing new software, it's always a good idea to update your package manager to ensure you have access to the latest versions. Open your terminal and run:
    ```bash
    sudo apt update
