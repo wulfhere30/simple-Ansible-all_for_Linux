@@ -58,7 +58,7 @@ The playbook includes tasks to install the following:
    ansible-playbook -i <your-inventory-file> setup-ubuntu.yml
    ```
 
-Replace `<your-inventory-file>` with the path to your inventory file.
+Replace `<your-inventory-file>` with the path to your inventory file. The repository contains a sample inventory.ini file. You need to create your own file.
 
 ## Customization
 You can customize the playbook by modifying the `setup-ubuntu.yml` file. Add or remove packages as per your requirements.
