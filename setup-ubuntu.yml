@@ -25,6 +25,12 @@
           - python3-pip
         state: latest
 
+    # Update the apt cache to ensure we are getting the latest versions of packages.
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+        cache_valid_time: 86400 # Cache is valid for a day (specified in seconds).
+        
     # Install Node.js and NPM, a JavaScript runtime and package manager.
     - name: Install Node.js and NPM
       apt:
@@ -94,13 +100,32 @@
           - docker-compose
         state: latest
 
-    # Install DevOps tools - Ansible for automation and Terraform for infrastructure as code.
+    # Install Ansible for automation.
     - name: Install DevOps tools
       apt:
         name:
           - ansible
-          - terraform
         state: latest
+        
+    # Add the HashiCorp GPG key for installing packages from their repository.
+    - name: Add HashiCorp GPG key
+      ansible.builtin.apt_key:
+        url: https://apt.releases.hashicorp.com/gpg
+        state: present
+        
+    # Add the HashiCorp repository for installing Terraform.
+    - name: Add HashiCorp repository
+      ansible.builtin.apt_repository:
+        repo: deb [arch=amd64] https://apt.releases.hashicorp.com {{ ansible_distribution_release }} main
+        state: present
+        update_cache: yes
+        
+    # Install Terraform for infrastructure as code.
+    - name: Install Terraform
+      ansible.builtin.apt:
+        name: terraform
+        state: latest
+        update_cache: yes
 
     # Install session management tools - screen and tmux.
     - name: Install session management tools
@@ -118,6 +143,7 @@
           - unzip
           - tar
         state: latest
+
 
 
         
